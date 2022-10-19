@@ -1,9 +1,4 @@
 /* 
-
-(Bônus) Para cada link na lista de aliados da pessoa desenvolvedora, faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte “temática do site”
-*/
-
-/* 
 Faça com que todos os itens de Listas Ordenadas tenham uma cor de fundo amarela. Se a numeração do item for PAR, faça a cor de fonte ser verde. Se o número for considerado ÍMPAR, utilize a propriedade text-transform para deixar o texto maiúsculo. (Dica: combinar classes pode ser útil aqui).
 */
 
@@ -52,3 +47,29 @@ Na listagem de linguagens de programação, faça com que as 3 primeiras da list
 .javapink {
     background-color: pink;
 }
+
+/* 
+(Bônus) Para cada link na lista de aliados da pessoa desenvolvedora, faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte “temática do site”
+*/
+
+#aliados li a:hover {
+    background-color: blue;
+    font-weight: 700;
+}
+    #aliados li a[href*="stackoverflow"] {
+    color: orange;
+}
+    #aliados li a[href*="w3schools"] {
+    color: green;
+}
+    #aliados li a[href*="mozilla"] {
+    color: black;
+}
+    #aliados li a[href*="devdocs"] {
+    color: yellow;
+}
+    #aliados li a[href*="trybe"] {
+    color: green;
+}
+
+
