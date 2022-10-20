@@ -53,7 +53,7 @@ Na listagem de linguagens de programação, faça com que as 3 primeiras da list
 */
 
 #aliados li a:hover {
-    background-color: blue;
+    /* background-color: blue; */
     font-weight: 700;
 }
     #aliados li a[href*="stackoverflow"] {
