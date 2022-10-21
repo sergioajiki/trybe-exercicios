@@ -8,7 +8,7 @@ switch (pecaXadrez.toLowerCase()) {
     console.log('Bispo - Movimenta na diagonal.');
     break;
   case 'rainha':
-    console.log('Rainha - Movimenta na diagonal, horizontal e vertical.');
+    console.log('Dama - Movimenta na diagonal, horizontal e vertical.');
     break;
   case 'cavalo':
     console.log('Cavalo - Movimenta em "L" pode pular sobre as peças.');
