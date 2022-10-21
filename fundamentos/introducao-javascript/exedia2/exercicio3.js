@@ -7,7 +7,12 @@ for (let index = 0; index < numbers.length; index++) {
     mediaNumbers = totalSoma / numbers.length;
   
 }
-console.log(totalSoma)
-console.log(numbers.length)
-console.log('A média do Array é ' + mediaNumbers)
+// console.log(totalSoma)
+// console.log(numbers.length)
+// console.log('A média do Array é ' + mediaNumbers)
+if (mediaNumbers > 20) {
+    console.log('valor maior que 20');
+}   else {
+    console.log('valor menor ou igual a 20');
+}
 
