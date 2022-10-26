@@ -70,3 +70,23 @@ function numero(a) {
     }
 }
 console.log(numero(5));
+
+// Faça um programa que receba três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for inválido, o programa deve retornar uma mensagem de erro.
+// Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.
+
+// Um ângulo será considerado inválido se não tiver um valor positivo.
+
+function verificaAnguloTriangulo(ang1, ang2, ang3) {
+    let somaAngulo = 0
+    somaAngulo = ang1 + ang2 + ang3
+    if (ang1 <= 0 || ang2 <= 0 || ang3 <= 0) {
+        return 'Ângulo inválido';
+    } else if          
+        (somaAngulo === 180) {
+        return true; 
+    } else {
+        return false;
+    }
+}
+
+console.log(verificaAnguloTriangulo(150, -20 ,10))
