@@ -71,3 +71,22 @@ function somatoria(numeroN) {
     return soma
 }
 console.log(somatoria(6));
+
+
+
+// Crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word.
+
+function verificaString(palavra, ending) {
+    palavra = palavra.split('');
+    ending = ending.split('');
+    let controle = true;
+
+    for (let index = 0; index < ending.length; index += 1) {
+        if (palavra[palavra.length - ending.length + index] != ending[index]) {
+            controle = false;
+        }
+    return controle;    
+    }
+}
+console.log(verificaString('trybe', 'be'));
+console.log(verificaString('joaofernando', 'fernan'));
