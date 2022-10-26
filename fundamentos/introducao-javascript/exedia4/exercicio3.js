@@ -90,3 +90,4 @@ function verificaAnguloTriangulo(ang1, ang2, ang3) {
 }
 
 console.log(verificaAnguloTriangulo(150, -20 ,10))
+
