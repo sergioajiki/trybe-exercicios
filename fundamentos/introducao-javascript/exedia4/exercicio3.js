@@ -44,8 +44,19 @@ console.log(maiorNum(1, 1))
 // Faça um programa que retorne o maior de três números. Defina, no começo do programa, três constantes com os valores que serão comparados.
 
 
+function numMaior(num1, num2, num3) {
+    // if (num1 === num2 && num1 === num3) {
+    //     return 'os três números são iguais';
+    if (num1 >= num2 && num1 > num3) {
+        return num1 + ' é o número maior';
+    } else if (num2 > num1 && num2 > num3) {
+        return num2 + ' é o número maior';
+    } else {
+        return num3 + ' é o número maior';
+    }
+}
 
-
+console.log(numMaior(30, 0, 0));
 
 
 
