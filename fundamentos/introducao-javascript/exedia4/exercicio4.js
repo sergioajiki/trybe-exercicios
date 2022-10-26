@@ -39,5 +39,22 @@ function indexMaiorValor(numeros) {
 }
    
 
-console.log(indexMaiorValor([2, 3, 6, 7, 10, 1, 20]))
+console.log(indexMaiorValor([2, 3, 6, 7, 10, 1]))
 
+
+
+
+// Crie uma função que receba um array de inteiros e retorne o índice do menor valor
+
+function indexMenorValor(num) {
+    let indexMenor = 0;
+    for (let index in num)
+    if (num[indexMenor] > num[index]) {
+        indexMenor = index;
+    }
+    // console.log(num[index]);
+    return indexMenor
+
+
+
+}console.log(indexMenorValor([2, 4, 6, 7, -10, 0, -30]));
