@@ -58,11 +58,15 @@ function numMaior(num1, num2, num3) {
 
 console.log(numMaior(30, 0, 0));
 
+// Faça um programa que, dado um valor recebido como parâmetro, retorne “positive” se esse valor for positivo, “negative” se for negativo, e caso não seja nem positivo e nem negativo retorne “zero”.
 
-
-
-
-
-
-
-
+function numero(a) {
+    if (a === 0) {
+        return 'zero';
+    } else if (a > 0) {
+        return 'positive' 
+    } else {
+        return 'negative'
+    }
+}
+console.log(numero(5));
