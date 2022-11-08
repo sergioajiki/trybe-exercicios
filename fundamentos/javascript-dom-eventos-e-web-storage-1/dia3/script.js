@@ -129,3 +129,51 @@ const newTaskSpan = (task) => {
 
 newTaskSpan('projeto');
 
+const newTaskDiv = (color) => {
+    let tasksContainer = document.querySelector('.my-tasks');
+    let newTask = document.createElement('div');
+
+    newTask.className = 'task';
+    newTask.style.backgroundColor = color;
+    tasksContainer.appendChild(newTask);
+}
+
+newTaskDiv('green');
+
+const setTaskClass = () => {
+    let selectedTask = document.getElementsByClassName('task selected');
+    let myTasks = document.querySelector('.task');
+    myTasks.addEventListener('click', (event) => {
+
+        if (selectedTask.length === 0) {
+            event.target.className = 'task selected';
+        } else {
+            event.target.className = 'task';
+        }
+    }); 
+}
+setTaskClass();
+
+
+// Implemente uma função que atribua a cor da tarefa ao dia do calendário;
+// Adicione um evento que, ao clicar em um dia do mês no calendário, atribua a esse dia a cor da legenda da sua tarefa selecionada;
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119).
+
+const setDayColor = () => {
+    let selectedTask = document.getElementsByClassName('task selected');
+    let days = document.querySelector('#days');
+    let taskDiv = document.querySelector('.task');
+    let taskColor = taskDiv.style.backgroundColor;
+
+    days.addEventListener('click', (event) => {
+        let eventTargetColor = event.target.style.color;
+        if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+            let color = selectedTask[0].style.backgroundColor;
+            event.target.style.color = color;
+        }
+        else if (eventTargetColor === taskColor) {
+            event.target.style.color = 'rgb(119,119,119)';
+        } 
+    });
+}
+setDayColor();
