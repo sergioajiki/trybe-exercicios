@@ -69,7 +69,7 @@ const authorBornIn1947 = () => {
     console.log(books.find(book => book.author.birthYear === 1947).author.name)
     return books.find(book => book.author.birthYear === 1947).author.name;
 }
-authorBornIn1947()
+// authorBornIn1947()
 
 // const expectedResult = 'Duna';
 const smallerName = () => {
@@ -82,26 +82,26 @@ const smallerName = () => {
     console.log(nameBook);
     return nameBook;
 }
-smallerName()
+// smallerName()
 
 const getNamedBook = () => {
     console.log(books.find((book) => book.name.length === 26).name);
     return books.find((book) => book.name.length === 26).name;
 }
-getNamedBook()
+// getNamedBook()
 
 const everyoneWasBornOnSecXX = () => {
     return books.every((book) => (
         book.author.birthYear >= 1901 && book.author.birthYear <= 2000
     ));
 }
-console.log(everyoneWasBornOnSecXX());
+// console.log(everyoneWasBornOnSecXX());
 
 
 const someBookWasReleaseOnThe80s = () => {
     return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
 }
-console.log(someBookWasReleaseOnThe80s());
+// console.log(someBookWasReleaseOnThe80s());
 
 const expectedResult = false;
 
@@ -112,13 +112,13 @@ const authorUnique = () => {
             && (bookSome.author.name !== book.author.name)))
 }
 
-console.log(authorUnique());
+// console.log(authorUnique());
 
 const formatedBookNames = () => {
     return books.map((book) =>
         (`${book.name} - ${book.genre} - ${book.author.name}`));
 };
-console.log(formatedBookNames());
+// console.log(formatedBookNames());
 
 const nameAndAge = () => {
     return books.map((book) => (
@@ -126,8 +126,42 @@ const nameAndAge = () => {
             author: book.author.name,
             age: book.releaseYear - book.author.birthYear,
         }
-        ))
-        .sort((obj1, obj2) => obj1.age - obj2.age );
-  }
+    ))
+        .sort((obj1, obj2) => obj1.age - obj2.age);
+}
 
-console.log(nameAndAge());
+// console.log(nameAndAge());
+
+const fantasyOrScienceFiction = () => {
+    return books.filter(book => {
+        return book.genre === 'Fantasia' || book.genre === 'Ficção Científica';
+    });
+}
+// console.log(fantasyOrScienceFiction());
+
+const oldBooksOrdered = () => {
+    const currentYear = new Date().getFullYear();
+    return books
+        .filter((book) => (currentYear - book.releaseYear) >= 60)
+        .sort((book1, book2) => book1.releaseYear - book2.releaseYear);
+}
+
+//   console.log(oldBooksOrdered());
+
+
+const booksByAuthorBirthYear = (birthYear) => {
+    return books
+        .filter((book) => book.author.birthYear === birthYear)
+        .map((book) => book.name)
+}
+const result = booksByAuthorBirthYear(1920);
+//   console.log(result);
+
+const wantedGenres = ['Fantasia', 'Ficção Científica'];
+const fantasyOrScienceFictionAuthors = () => {
+    return books
+    .filter((book) => wantedGenres.includes(book.genre))
+    .map((book) => book.author.name)
+    .sort();
+}
+console.log(fantasyOrScienceFictionAuthors());
