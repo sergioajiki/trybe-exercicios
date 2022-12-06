@@ -87,37 +87,47 @@ smallerName()
 const getNamedBook = () => {
     console.log(books.find((book) => book.name.length === 26).name);
     return books.find((book) => book.name.length === 26).name;
-  }
+}
 getNamedBook()
 
 const everyoneWasBornOnSecXX = () => {
     return books.every((book) => (
-    book.author.birthYear >= 1901 && book.author.birthYear <= 2000
-  ));
+        book.author.birthYear >= 1901 && book.author.birthYear <= 2000
+    ));
 }
 console.log(everyoneWasBornOnSecXX());
 
 
 const someBookWasReleaseOnThe80s = () => {
-  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
+    return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
 }
 console.log(someBookWasReleaseOnThe80s());
 
 const expectedResult = false;
 
 const authorUnique = () => {
-  return books.every((book) => 
-  !books.some((bookSome) => 
-  (bookSome.author.birthYear === book.author.birthYear)
-  && (bookSome.author.name !== book.author.name)))
+    return books.every((book) =>
+        !books.some((bookSome) =>
+            (bookSome.author.birthYear === book.author.birthYear)
+            && (bookSome.author.name !== book.author.name)))
 }
 
 console.log(authorUnique());
 
 const formatedBookNames = () => {
     return books.map((book) =>
-    (`${book.name} - ${book.genre} - ${book.author.name}`));
-    
-  };
+        (`${book.name} - ${book.genre} - ${book.author.name}`));
+};
 console.log(formatedBookNames());
 
+const nameAndAge = () => {
+    return books.map((book) => (
+        {
+            author: book.author.name,
+            age: book.releaseYear - book.author.birthYear,
+        }
+        ))
+        .sort((obj1, obj2) => obj1.age - obj2.age );
+  }
+
+console.log(nameAndAge());
