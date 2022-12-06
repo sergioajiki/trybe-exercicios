@@ -164,4 +164,25 @@ const fantasyOrScienceFictionAuthors = () => {
     .map((book) => book.author.name)
     .sort();
 }
-console.log(fantasyOrScienceFictionAuthors());
+// console.log(fantasyOrScienceFictionAuthors());
+
+const oldBooks = () => {
+    const currentYear = new Date().getFullYear();
+      return books
+      .filter((book) => (currentYear - book.releaseYear) >= 60)
+      .map((book) => book.name)
+      .sort()
+  }
+
+console.log(oldBooks());
+
+const authorWith3DotsOnName = () => {
+    return books.filter((book) => (
+      book.author.name[1] === '.'
+      && book.author.name[4] === '.'
+      && book.author.name[7] === '.'
+    ))
+  }
+  console.log(authorWith3DotsOnName());
+
+  
