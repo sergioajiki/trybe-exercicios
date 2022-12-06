@@ -113,3 +113,11 @@ const authorUnique = () => {
 }
 
 console.log(authorUnique());
+
+const formatedBookNames = () => {
+    return books.map((book) =>
+    (`${book.name} - ${book.genre} - ${book.author.name}`));
+    
+  };
+console.log(formatedBookNames());
+
