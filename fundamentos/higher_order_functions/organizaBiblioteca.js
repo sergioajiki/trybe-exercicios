@@ -160,29 +160,28 @@ const result = booksByAuthorBirthYear(1920);
 const wantedGenres = ['Fantasia', 'Ficção Científica'];
 const fantasyOrScienceFictionAuthors = () => {
     return books
-    .filter((book) => wantedGenres.includes(book.genre))
-    .map((book) => book.author.name)
-    .sort();
+        .filter((book) => wantedGenres.includes(book.genre))
+        .map((book) => book.author.name)
+        .sort();
 }
 // console.log(fantasyOrScienceFictionAuthors());
 
 const oldBooks = () => {
     const currentYear = new Date().getFullYear();
-      return books
-      .filter((book) => (currentYear - book.releaseYear) >= 60)
-      .map((book) => book.name)
-      .sort()
-  }
+    return books
+        .filter((book) => (currentYear - book.releaseYear) >= 60)
+        .map((book) => book.name)
+        .sort()
+}
 
 console.log(oldBooks());
 
 const authorWith3DotsOnName = () => {
     return books.filter((book) => (
-      book.author.name[1] === '.'
-      && book.author.name[4] === '.'
-      && book.author.name[7] === '.'
+        book.author.name[1] === '.'
+        && book.author.name[4] === '.'
+        && book.author.name[7] === '.'
     ))
-  }
-  console.log(authorWith3DotsOnName());
+}
+console.log(authorWith3DotsOnName());
 
-  
