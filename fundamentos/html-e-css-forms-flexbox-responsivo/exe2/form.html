@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    O formulário deverá permitir que a pessoa usuária insira os seguintes campos:
+    Nome Completo:
+    
+    Limitado entre 10 e 40 caracteres.
+    E-mail:
+    
+    Limitado entre 10 e 50 caracteres.
+    Destino Preferido:
+    
+    4 opções: Cidade, Campo, Praia, Montanhas.
+    Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+    
+    Limite de 500 caracteres.
+
+    Qual a melhor data para realizar sua viagem?
+    
+    Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+    
+    Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+    
+    Esses serão os principais campos utilizados nos próximos exercícios.
+    
+    Crie um botão para enviar as informações preenchidas. -->
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form teste</title>
+</head>
+<header>
+    <h1>Formulário teste</h1>
+</header>
+<body>
+    <form>
+        <fieldset>
+            <label for="comeCompleto"> Nome Completo: </label>
+            <input type="text" id="nomeComplet" name="nomeCompleto" minlength="10" maxlength="40">
+            <br>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" minlength="10" maxlength="50">
+            <br>
+            
+            <p>Destino Preferido</p>
+            
+            <input type="radio" id="destino1" name="destino">
+            <label for="destino1" value="Cidade">Cidade</label>
+
+            <input type="radio" id="destino2" name="destino">
+            <label for="destino2" value="Campo">Campo</label>
+            
+            <input type="radio" id="destino3" name="destino">
+            <label for="destino3" value="Praia">Praia</label>
+            
+            <input type="radio" id="destino4" name="destino">
+            <label for="destino4" value="Montanha">Montanha</label>
+            <br>
+            
+            <label for="texto">Por que você deveria ser a pessoa desenvolvedora escolhida pelo concurso TrybeTrip?</label>
+            <textarea name="texto" id="texto" placeholder="Digite seu texto aqui" maxlength="500" cols="60" rows="10">     </textarea> 
+            <br>
+            
+            <label for="date">Qual a melhor data para realizar sua viagem?</label>
+            <input type="date" id="date">
+            <br>
+            
+            <input type="checkbox" id="promo"  name="promo">
+            <label for="promo" >Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            <br>
+            
+            <button type="submit" id="buttonEnviar">Participar do Concurso Trybe</button>
+            <button type="button" id="clearBtn"> Apagar informações</button>
+        </fieldset>
+    </form>
+<script src="script.js">
+
+</script>
+    
+</body>
+</html>
